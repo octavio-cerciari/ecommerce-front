@@ -1,17 +1,22 @@
 <div class="navbar" *ngIf="showNav()">
-	<div class="flex-item">
+	<div class="flex-item col-4">
 		<img src="../assets/img/nav-logo.svg" alt="header" class="header" (click)="navigation('/')">
 	</div>
 
-	<div class="flex-item">
+	<div class="flex-item col-4">
 		<input type="text" placeholder="Pesquisar por produtos..." class="search_input" [value]="searchWord" (keyup)="setSearchWord($event)">
 	</div>
 
-	<div class="flex-item icons">
-		<img src="../assets/img/moon.svg" alt="header" class="moon_icon" (click)="darkMode()">
+	<div class="flex-item icons col-3">
 		<img src="../assets/img/cart_icon.png" alt="header" class="cart_icon" (click)="navigation('/cart')">
 		<label class="cart-items-count">{{ cartCount() }}</label>
 		<img src="../assets/img/purchases_icon.png" alt="header" class="purchases_icon" (click)="navigation('/purchases')">
 		<label class="purchases-items-count">{{ purchasesCount() }}</label>
 	</div>
+</div>
+
+
+<div class="dark-mode" (click)="darkMode()">
+	<img *ngIf="theme === 'light-theme'" src="../assets/img/moon.svg" alt="header" class="light-mode-icon">
+	<img *ngIf="theme === 'dark-theme'" src="../assets/img/sun.svg" alt="header" class="dark-mode-icon">
 </div>

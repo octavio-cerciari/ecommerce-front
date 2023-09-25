@@ -50,9 +50,6 @@
             height: 81px
             cursor: pointer
 
-        .moon_icon
-            width: 16px 
-
         .cart-items-count
             width: 20px
             height: 20px
@@ -76,6 +73,28 @@
             font-size: 16px
             margin-right: 10px
             position: absolute
+
+.dark-mode
+    position: fixed
+    width: 50px
+    height: 50px
+    bottom: 0
+    right: 20px
+    background: var(--primary)
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 1
+
+    .light-mode-icon
+        width: 20px
+        filter: invert(1)
+        cursor: pointer
+
+    .dark-mode-icon
+        width: 20px
+        filter: invert(1)
+        cursor: pointer
 
 @media screen
     @media (max-width:1024px)
@@ -119,17 +138,3 @@
             .header
                 padding: 10px 10px 10px 15px !important
                 width: 130px !important
-            .cart_icon
-                width: 50px !important
-                height: 30px !important
-            .purchases_icon
-                width: 50px !important
-                height: 30px !important
-            .cart-items-count
-                width: 10px !important
-                margin-right: 0px !important
-                margin-left: 25px !important
-            .purchases-items-count
-                width: 10px !important
-                margin-right: 0px !important
-                margin-left: 120px !important

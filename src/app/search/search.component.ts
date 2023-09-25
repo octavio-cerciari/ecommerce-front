@@ -46,10 +46,85 @@ export class SearchComponent implements OnInit {
 	}
 
 	getProducts() {
-		this.productService.getProductsList().subscribe((products: Product[]) => {
-			this.products = products;
-			this.allProducts = products;
-		});
+		// this.productService.getProductsList().subscribe((products: Product[]) => {
+		// 	this.products = products;
+		// 	this.allProducts = products;
+		// });
+
+		this.products = this.allProducts = [
+			{
+				"id": 1,
+				"description": "Camiseta Vermelha",
+				"size": 'GG',
+				"color": 'vermelho',
+				"photo": 'red-shirt.png',
+				"longDescription": "LemonChiffon T-shirt Repellendus eligendi assumenda corrupti optio omnis ut. At distinctio quam illum incidunt suscipit dolorem. Porro dolores vel harum praesentium perferendis impedit dolor repellendus.",
+				"price": 330.96
+			},
+			{
+				"id": 2,
+				"description": "Camiseta Vermelha",
+				"size": 'P',
+				"color": 'vermelho',
+				"photo": 'red-shirt.png',
+				"longDescription": "LemonChiffon T-shirt Repellendus eligendi assumenda corrupti optio omnis ut. At distinctio quam illum incidunt suscipit dolorem. Porro dolores vel harum praesentium perferendis impedit dolor repellendus.",
+				"price": 330.96
+			},
+			{
+				"id": 3,
+				"description": "Camiseta Vermelha",
+				"size": 'M',
+				"color": 'vermelho',
+				"photo": 'red-shirt.png',
+				"longDescription": "LemonChiffon T-shirt Repellendus eligendi assumenda corrupti optio omnis ut. At distinctio quam illum incidunt suscipit dolorem. Porro dolores vel harum praesentium perferendis impedit dolor repellendus.",
+				"price": 330.96
+			},
+			{
+				"id": 4,
+				"description": "Camiseta Verde",
+				"size": 'M',
+				"color": 'verde',
+				"photo": 'green-shirt.png',
+				"longDescription": "DarkGreen T-shirt Vitae omnis neque consequatur illo repellat quaerat doloribus. At ab iure modi et autem. Dolor ex eveniet architecto aut est. Est veritatis nostrum incidunt dolorum et eum. Culpa et voluptatem accusamus id debitis voluptates magnam molestiae.",
+				"price": 386.22
+			},
+			{
+				"id": 5,
+				"description": "Camiseta Verde",
+				"size": 'G',
+				"color": 'verde',
+				"photo": 'green-shirt.png',
+				"longDescription": "DarkGreen T-shirt Vitae omnis neque consequatur illo repellat quaerat doloribus. At ab iure modi et autem. Dolor ex eveniet architecto aut est. Est veritatis nostrum incidunt dolorum et eum. Culpa et voluptatem accusamus id debitis voluptates magnam molestiae.",
+				"price": 386.22
+			},
+			{
+				"id": 6,
+				"description": "Camiseta Verde",
+				"size": 'P',
+				"color": 'verde',
+				"photo": 'green-shirt.png',
+				"longDescription": "DarkGreen T-shirt Vitae omnis neque consequatur illo repellat quaerat doloribus. At ab iure modi et autem. Dolor ex eveniet architecto aut est. Est veritatis nostrum incidunt dolorum et eum. Culpa et voluptatem accusamus id debitis voluptates magnam molestiae.",
+				"price": 386.22
+			},
+			{
+				"id": 7,
+				"description": "Camiseta Azul",
+				"size": 'GG',
+				"color": 'azul',
+				"photo": 'blue-shirt.png',
+				"longDescription": "HoneyDew T-shirt Voluptatem nihil assumenda ut. Optio labore consequatur iusto qui nam corporis. Assumenda neque molestias voluptatem doloribus molestias ut quibusdam velit. Omnis quia occaecati officiis non laborum quo unde. Voluptatem ut consequatur consequatur dolore praesentium fugit.",
+				"price": 293.42
+			},
+			{
+				"id": 8,
+				"description": "Camiseta Azul",
+				"size": 'P',
+				"color": 'azul',
+				"photo": 'blue-shirt.png',
+				"longDescription": "HoneyDew T-shirt Voluptatem nihil assumenda ut. Optio labore consequatur iusto qui nam corporis. Assumenda neque molestias voluptatem doloribus molestias ut quibusdam velit. Omnis quia occaecati officiis non laborum quo unde. Voluptatem ut consequatur consequatur dolore praesentium fugit.",
+				"price": 293.42
+			}
+		]
 	}
 
 	addItemCart(item: Product) {
