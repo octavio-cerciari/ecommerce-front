@@ -1,0 +1,250 @@
+.search-container
+    padding: 100px 10% 0 10%
+    display: flex
+    flex-directions: row
+    flex-wrap: wrap
+
+    .search-title
+        color: #101010
+        font-family: Roboto
+        font-size: 19px
+        font-style: normal
+        font-weight: 500
+        line-height: 150%
+        margin-bottom: 15px
+        margin-top: 15px
+
+    .search-result
+        color: #606060
+        font-family: Roboto
+        font-size: 17px
+        font-style: italic
+        font-weight: 300
+        line-height: 150%
+
+    .search-filter
+        color: #606060
+        font-family: Roboto
+        font-size: 17px
+        font-style: normal
+        font-weight: 300
+        line-height: 150%
+        flex: 1
+
+    .search-checkbox
+        flex: 1
+        width: 17px
+        height: 17px  
+
+
+
+    .cart-actions
+        display: flex
+        justify-content: flex-start
+
+        .select-all-button
+            border-radius: 10px
+            background: #FAFAFA
+            border: none
+            width: 250px
+            height: 53px
+            color: #170063
+            text-align: center
+            font-family: Roboto
+            font-size: 19px
+            font-style: normal
+            font-weight: 500
+            line-height: 150%
+
+        .add-all-button
+            width: 250px
+            height: 53px
+            border-radius: 10px
+            border: 1px solid #170063
+            background: #20124E
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+            color: #FFF
+            text-align: center
+            font-family: Roboto
+            font-size: 19px
+            font-style: normal
+            font-weight: 500
+            line-height: 150%
+
+            &.disabled
+                border: 1px solid darkgray
+                background: darkgray
+                cursor: no-drop
+
+
+.cart
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 30px
+
+    .cart-item
+        cursor: pointer
+
+    .checked
+        background-color: lightgrey
+
+    .product-column
+        align-items: center
+        display: flex
+        justify-content: center
+
+    .description
+        flex-direction: column
+        align-items: flex-start
+
+    .shirt
+        width: 10vw
+        height: auto
+        flex-shrink: 0
+    
+        &.unchecked
+            border: none !important
+
+        &.checked
+            border: 1px solid gainsboro !important
+
+    .actions
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+
+    .product-title
+        color: #000
+        font-family: Saira
+        font-size: 34px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        padding: 0
+        margin: 0
+
+    .product-value
+        color: #505050 
+        font-family: Saira
+        font-size: 17px
+        font-style: italic
+        font-weight: 300
+        line-height: 150%
+        padding: 0
+        margin: 0
+
+    .product-subtitle
+        color: #000
+        font-family: Saira
+        font-size: 14px
+        font-style: normal
+        font-weight: 300
+        line-height: 150%
+        width: 500px
+        padding: 0
+        margin: 0
+        text-align: justify
+
+    .add-cart-button
+        width: 150px
+        height: 53px
+        border-radius: 10px
+        border: 1px solid #170063
+        background: #20124E
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        color: #FFF
+        text-align: center
+        font-family: Roboto
+        font-size: 19px
+        font-style: normal
+        font-weight: 500
+        line-height: 150%
+        margin-top: 30px
+	
+    .favorite-button
+        border: none
+        background: transparent
+        margin: 0
+
+    .heart
+        width: 25px
+        height: 25px
+        margin-right: 5px
+
+.divisor
+    border: 1px stroke #E4E4E4
+    width: 95%
+    margin-left: 2.5%
+    margin-top: 10px
+    margin-bottom: 10px
+
+
+@media screen
+    @media (max-width:1000px)
+        .search-container
+            padding: 100px 8% 0 8%
+        
+        .cart-actions
+            display: flex
+            justify-content: center !important
+
+            .select-all-button
+                width: 220px !important
+                font-size: 19px !important
+
+            .add-all-button
+                width: 220px !important
+                font-size: 19px !important
+        
+        .shirt
+            width: 30vw !important
+        
+        .description
+            align-items: center !important
+        
+        .actions
+            display: flex
+            flex-direction: row-reverse !important
+            align-items: baseline !important
+            padding-bottom: 20px
+
+            .heart
+                margin-left: 30px
+            
+
+    @media (max-width:780px)
+        .search-container
+            padding: 100px 6% 0 6%
+
+        .cart-actions
+            .select-all-button
+                width: 200px !important
+                font-size: 17px !important
+
+
+            .add-all-button
+                width: 200px !important
+                font-size: 17px !important
+
+
+        .product-title
+            font-size: 26px !important
+
+        .shirt
+            width: 40vw !important
+
+    @media (max-width:500px)
+        .search-container
+            padding: 100px 4% 0 4%
+
+        .product-title
+            font-size: 24px !important
+        
+        .shirt
+            width: 50vw !important
+
+        .cart-actions
+            justify-content: center !important
+

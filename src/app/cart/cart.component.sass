@@ -1,0 +1,225 @@
+.cart-container-empty
+    padding: 160px 14% 0 14%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .cart-text
+        width: 30vw
+
+    .cart-img
+        width: 30vw
+        flex-shrink: 0
+        margin-top: 37px
+
+.cart-container
+    padding: 100px 14% 0 14%
+    text-align: start
+
+    .title
+        color: #000
+        font-family: Montserrat
+        font-size: 47px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        margin: 0 0 0 -50pxs
+
+    .cart
+        display: block
+        margin-top: 40px
+
+        .description
+            flex-direction: column
+            align-items: flex-start !important
+
+
+        .product-column
+            align-items: center
+            display: flex
+            justify-content: center
+
+            .shirt
+                width: 126.769px
+                height: 120px
+                flex-shrink: 0
+  
+            .product-title
+                color: #000
+                font-family: Saira
+                font-size: 34px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+                padding: 0
+                margin: 0
+
+            .product-value
+                color: #505050 
+                font-family: Saira
+                font-size: 17px
+                font-style: italic
+                font-weight: 300
+                line-height: 150%
+                padding: 0
+                margin: 0
+
+            .actions
+                display: flex
+                flex-direction: row
+                flex-wrap: nowrap
+                padding: 5px 0 5px 0
+                margin: 0
+
+                .favorite-button
+                    border: none
+                    background: transparent
+                    margin: 0
+                    padding: 0
+
+                .heart
+                    width: 25px
+                    height: 25px
+
+                .trash
+                    width: 30px
+                    height: 30px
+                    margin-right: 25p
+
+                .product-action  
+                    text-align: center
+                    font-family: Roboto
+                    font-size: 19px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 150%
+                    border: 0
+                    background: transparent
+
+                .delete
+                    color: #DD3434
+
+                .favorite
+                    color: #00DDA5
+
+            .product-subtitle
+                width: 300px
+                color: #000
+                font-family: Saira
+                font-size: 14px
+                font-style: normal
+                font-weight: 300
+                line-height: 150%
+                padding: 0
+                margin: 0
+                text-align: justify
+
+            .item-button
+                width: 46px
+                height: 46px
+                background: #F0F0F0
+                border: none
+                font-family: Roboto
+                font-size: 17px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+  
+            .quantity-label
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 0
+                margin: 0
+                color: #101010
+
+            .add-button
+                font-size: 30px
+                color: #00DDA5
+
+            .remove-button
+                color: #DD3434
+                font-size: 40px
+
+            .product-final-value
+                color: #101010
+                font-family: Roboto
+                font-size: 24px
+                font-style: normal
+                font-weight: 400
+                line-height: 150%
+
+    .divisor
+        border: 1px stroke #E4E4E4
+        width: 100%
+        margin-top: 10px
+        margin-bottom: 10px
+
+    .cart-value-box
+        height: 200px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+        .cart-value-text
+            color: #101010
+            font-family: Roboto
+            font-size: 24px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%
+            margin-right: 60px
+
+        .cart-value
+            color: #101010
+            font-family: Roboto
+            font-size: 28px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%  
+ 
+        .finish-button
+            width: 207px
+            height: 53px
+            border-radius: 10px
+            border: 1px solid #00AD81
+            background: #00DDA5
+            color: #FFF
+            text-align: center
+            font-family: Roboto
+            font-size: 20px
+            font-style: normal
+            font-weight: 400
+            line-height: 150%
+
+
+
+@media screen
+    @media (max-width:1024px)
+        .cart-container-empty
+            .cart-img
+                width: 40vw
+            .cart-text
+                width: 40vw
+
+    @media (max-width:768px)
+        .cart-container-empty
+            .cart-img
+                width: 50vw
+            .cart-text
+                width: 50vw
+        .cart-container
+            text-align: center
+
+            .cart
+                .description
+                    align-items: center !important
+            
+            .cart-value-box
+                justify-content: center !important
+    @media (max-width:500px)
+        .cart-container-empty
+            .cart-img
+                width: 60vw
+            .cart-text
+                width: 60vw

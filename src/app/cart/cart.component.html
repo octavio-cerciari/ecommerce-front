@@ -1,0 +1,57 @@
+<div class="cart-container-empty" *ngIf="cart.items?.length === 0">
+	<img src="../assets/img/cart_text.png" alt="text" class="cart-text">
+	<img src="../assets/img/cart.png" alt="cart" class="cart-img">
+</div>
+<div class="cart-container" *ngIf="cart.items?.length !== 0">
+	<label class="title">Carrinho</label>
+	<div class="cart">
+		<div *ngFor="let item of cart.items" class="cart-item row col-12">
+
+			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 product-column">
+				<img src="../assets/img/{{item?.product?.photo}}" alt="shirt" class="shirt">
+			</div>
+			<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 product-column description" style="">
+
+				<label class="product-title">{{ item?.product?.description }}</label>
+
+				<label class="product-value">{{ 'R$' + item?.product?.price + ' / 1 UN / ' +
+					item?.product?.size}}</label>
+				<div class="actions">
+					<button class="product-action delete" (click)="removeItem(item.product)"><img
+							src="../assets/img/trash.png" alt="trash" class="trash"></button>
+					<button *ngIf="favoriteItems(item.product)" class="favorite-button"
+						(click)="addFavorite(item.product)"><img src="../assets/img/heart.png" alt="heart"
+							class="heart"></button>
+					<button *ngIf="!favoriteItems(item.product)" class="favorite-button"
+						(click)="addFavorite(item.product)"><img src="../assets/img/heart-empty.png" alt="heart"
+							class="heart"></button>
+				</div>
+				<label class="product-subtitle">{{ item?.product?.longDescription }} </label>
+
+			</div>
+			<div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 product-column">
+				<div style="display: flex; align-items: center; padding-bottom: 20px; padding-top: 20px;">
+					<button class="item-button" (click)="removeItemCount(item)"><img src="../assets/img/remove.png"
+							alt="remove" class="remove"></button>
+					<label class="item-button quantity-label">{{ item?.quantity }}</label>
+					<button class="item-button" (click)="addItemCount(item)"><img src="../assets/img/add.png" alt="add"
+							class="add"></button>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 product-column"><label class="product-final-value">{{ priceCalc(item) }}</label></div>
+			<hr class="divisor">
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="cart-value-box">
+			<label class="cart-value-text">Preço Total</label>
+			<label class="cart-value">{{ totalCalc() }} </label>
+		</div>
+		<hr class="divisor">
+		<div class="cart-value-box">
+			<button class="finish-button" (click)="checkout()">Finalizar Compra</button>
+		</div>
+	</div>
+
+</div>

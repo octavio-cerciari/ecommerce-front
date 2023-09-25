@@ -1,0 +1,118 @@
+.navbar
+    position: fixed
+    height: 94px
+    flex-shrink: 0
+    border: 1px solid #170063
+    background: #20124E
+    width: 100%
+    flex-wrap: nowrap
+    z-index: 1
+
+    .flex-item
+        display: flex
+        flex: 1
+        width: 33%
+
+        &.icons
+            justify-content: end
+
+        .header
+            width: 350px
+            filter: invert(1)
+            color: white
+            padding: 20px 20px 20px 30px
+            cursor: pointer
+
+        .search_input
+            width: -webkit-fill-available
+            height: 55px
+            flex-shrink: 0
+            background: #FAFAFA
+            stroke-width: 1px
+            stroke: #999
+            color: #AFAFAF
+            font-family: Roboto
+            font-size: 24px
+            font-style: normal
+            font-weight: 300
+            line-height: 150%
+            border-radius: 10px
+            border: 1px solid
+            padding-left: 20px
+
+        .cart_icon
+            width: 116px
+            height: 81px
+            cursor: pointer
+
+        .purchases_icon
+            width: 121px
+            height: 81px
+            cursor: pointer
+
+        .cart-items-count
+            width: 20px
+            height: 20px
+            background-color: red
+            color: white
+            justify-content: center
+            align-items: center
+            display: flex
+            font-size: 16px
+            margin-right: 130px
+            position: absolute
+
+        .purchases-items-count
+            width: 20px
+            height: 20px
+            background-color: red
+            color: white
+            justify-content: center
+            align-items: center
+            display: flex
+            font-size: 16px
+            margin-right: 10px
+            position: absolute
+
+@media screen
+    @media (max-width:1024px)
+        .navbar
+            .header
+                padding: 10px 10px 10px 15px !important
+                width: 250px !important
+
+    @media (max-width:780px)
+        .navbar
+            .header
+                padding: 10px 10px 10px 15px !important
+                width: 200px !important
+
+
+    @media (max-width:640px)
+        .navbar
+            .header
+                padding: 10px 10px 10px 15px !important
+                width: 150px !important
+            .cart_icon
+                width: 60px !important
+                height: 40px !important
+            .purchases_icon
+                width: 60px !important
+                height: 40px !important
+            .cart-items-count
+                width: 15px !important
+                margin-right: 20px !important
+            .purchases-items-count
+                width: 15px !important
+                margin-right: 0px !important
+                margin-left: 110px !important
+
+            .flex-item
+                &.icons
+                    justify-content: center
+
+    @media (max-width:500px)
+        .navbar
+            .header
+                padding: 10px 10px 10px 15px !important
+                width: 130px !important

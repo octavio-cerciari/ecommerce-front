@@ -1,0 +1,12 @@
+<div class="content">
+	<div class="row">
+		<img src="../assets/img/ecommerce-logo.png" alt="logo" class="logo">
+	</div>
+	<div class="row" style="margin-bottom: 46px;">
+		<input type="text" placeholder="Pesquisar por produtos..." class="search_input" [value]="searchWord" (keyup)="setSearchWord($event)">
+	</div>
+	<div class="row">
+		<button class="button cart" (click)="navigation('/cart')">Carrinho</button>
+		<button class="button search" (click)="navigation('/search')">Pesquisar</button>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="purchases-container">
+	<label class="title">Historico de compras</label>
+	<div *ngFor="let cart of purchases;let index=index" class="purchases">
+
+		<div class="row" style="display: flex;">
+			<label class="purchase-title">{{'Pedido ' + (index+1)}}</label>
+			<label class="purchase-value">{{'R$ ' + cart.total.toLocaleString()}}</label>
+		</div>
+
+		<div *ngFor="let item of cart.items" class="purchase-item row col-12">
+
+			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 product-column">
+				<div class="green-border"></div>
+				<img src="../assets/img/{{item.product.photo}}" alt="shirt" class="shirt">
+			</div>
+			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 product-column description" style="">
+
+				<label class="product-title">{{ item.product.description }}</label>
+
+				<label class="product-value">{{ 'R$ ' + item.product.price  +' / 1 UN' }}</label>
+			</div>
+			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 product-column">
+				<label class="product-quantity">{{ item.quantity  }}{{ item.quantity === 1 ? ' unidade' : ' unidades' }}</label>
+			</div>
+			<div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 product-column"><label class="product-final-value">{{ 'R$ ' + item.product.price*item.quantity }}</label></div>
+			<hr class="divisor">
+		</div>
+
+	</div>
+</div>

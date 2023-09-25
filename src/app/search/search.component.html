@@ -1,0 +1,77 @@
+<div class="search-container">
+	<div class="col-12 col-sm-4 col-md-4 col-lg-2 col-xl-2">
+		<div class="row" style="margin-top: 50px;">
+			<label class="search-title">{{ getSearchWord() }}</label>
+			<label class="search-result">{{ products.length + ' resultados' }}</label>
+			<hr class="divisor" style="width: 70%; margin-top: 13px;">
+
+			<label class="search-title">{{ 'Cor' }}</label>
+			<div class="row">
+				<label class="search-filter">{{ 'Vermelho' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterColor('vermelho')">
+			</div>
+
+			<div class="row">
+				<label class="search-filter">{{ 'Verde' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterColor('verde')">
+			</div>
+			<div class="row">
+				<label class="search-filter">{{ 'Azul' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterColor('azul')">
+			</div>
+
+			<label class="search-title">{{ 'Tamanho' }}</label>
+			<div class="row">
+				<label class="search-filter">{{ 'GG' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterSize('GG')">
+			</div>
+			<div class="row">
+				<label class="search-filter">{{ 'G' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterSize('G')">
+			</div>
+			<div class="row">
+				<label class="search-filter">{{ 'M' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterSize('M')">
+			</div>
+			<div class="row">
+				<label class="search-filter">{{ 'P' }}</label><input type="checkbox" class="search-checkbox"
+					(click)="addFilterSize('P')">
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12 col-sm-8 col-md-8 col-lg-10 col-xl-10">
+		<div class="cart-actions" style="margin-top: 50px; flex-wrap: nowrap;">
+			<button class="select-all-button" (click)="selectAllItems()">{{products.length !== selectedItems.length ? 'Selecionar todos' : 'Remover todos' }}</button>
+			<button class="add-all-button" [disabled]="selectedItems.length === 0" [ngClass]="selectedItems.length === 0 ? 'disabled' :''" (click)="addAllSelected()">Adicionar selecionados</button>
+		</div>
+
+		<div class="cart">
+			<div *ngFor="let item of products" class="cart-item row col-12" [ngClass]="selectedItemsCheck(item.id) ? 'checked' : ''">
+
+				<div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 product-column">
+					<input type="checkbox" class="search-checkbox" (click)="addItemSelected(item)" [checked]="selectedItemsCheck(item.id)">
+				</div>
+
+				<div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 product-column">
+					<img src="../assets/img/{{item.photo}}" alt="shirt" class="shirt" (click)="addItemSelected(item)">
+				</div>
+
+				<div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 product-column description">
+					<label class="product-title">{{ item.description }}</label>
+					<label class="product-value">{{ 'R$' + item.price + ' / 1 UN / ' + item.size}}</label>
+					<label class="product-subtitle">{{ item.longDescription }} </label>
+				</div>
+
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 product-column actions">
+					<button *ngIf="favoriteItems(item)" class="favorite-button" (click)="addFavorite(item)"><img
+							src="../assets/img/heart.png" alt="heart" class="heart"></button>
+					<button *ngIf="!favoriteItems(item)" class="favorite-button" (click)="addFavorite(item)"><img
+							src="../assets/img/heart-empty.png" alt="heart" class="heart"></button>
+					<button class="add-cart-button" (click)="addItemCart(item)">+ Carrinho</button>
+				</div>
+				<hr class="divisor">
+			</div>
+		</div>
+	</div>
+</div>
