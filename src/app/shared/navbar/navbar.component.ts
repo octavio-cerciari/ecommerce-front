@@ -11,6 +11,7 @@ import { PurchasesService } from '../services/purchases-service/purchases.servic
 })
 export class NavbarComponent implements OnInit {
 	searchWord = '';
+	theme = 'light-theme'
 	constructor(
 		private router: Router,
 		private cartService: CartService,
@@ -47,5 +48,17 @@ export class NavbarComponent implements OnInit {
 
 	purchasesCount() {
 		return this.purchasesService.getCount();
-	} 
+	}
+
+	darkMode() {
+		console.log(this.theme)
+		if (this.theme === 'light-theme') {
+		  this.theme = 'dark-theme'
+		  document.body.classList.toggle('dark-theme')
+		}
+		else {
+		  this.theme = 'light-theme'
+		  document.body.classList.remove('dark-theme')
+		}
+	  }
 }

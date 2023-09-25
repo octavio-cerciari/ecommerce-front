@@ -11,7 +11,7 @@ body
   padding: 0px !important
   scroll-behavior: smooth
   font-family: 'Roboto', sans-serif
-  background: #FAFAFA
+  background: var(--body)
 
 .content	
   height: -webkit-fill-available
@@ -19,3 +19,23 @@ body
   flex-direction: column
   justify-content: center
   align-items: center
+
+
+\:root
+  --primary:#48a97c
+  --secondary:#4f4f4f
+  --navbar-color:#48a97c
+  --body:white
+  --body-secondary:#fafafa
+  --primary-text-color: #4f4f4f
+  --secondary-text-color: #4f4f4f
+
+
+\:root .dark-theme
+  --primary:#4f4f4f
+  --secondary:#48a97c
+  --navbar-color:#4f4f4f
+  --body:#111821
+  --body-secondary:#151e29
+  --primary-text-color: #fafafa
+  --secondary-text-color: #4f4f4f

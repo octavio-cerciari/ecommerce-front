@@ -8,7 +8,7 @@
         border-radius: 100%
 
     .title
-        color: #000
+        color: var(--primary-text-color)
         font-family: Montserrat
         font-size: 47px
         font-style: normal
@@ -22,7 +22,7 @@
         margin-top: 100px
 	
         .purchase-title
-            color: #000
+            color: var(--primary-text-color)
             font-family: Saira
             font-size: 28px
             font-style: normal
@@ -30,9 +30,9 @@
             line-height: 150%
 
         .purchase-value
-            color: #000
+            color: var(--secondary-text-color)
             font-family: Saira
-            font-size: 28px
+            font-size: 25px
             font-style: normal
             font-weight: 400
             line-height: 150%
@@ -68,7 +68,7 @@
                 margin-right: 50px
 
             .product-title
-                color: #000
+                color: var(--primary-text-color)
                 font-family: Saira
                 font-size: 34px
                 font-style: normal
@@ -79,7 +79,7 @@
                 text-align: center
 
             .product-quantity  
-                color: #505050 
+                color: var(--secondary-text-color)
                 font-family: Roboto
                 font-size: 17px
                 font-style: italic
@@ -89,7 +89,7 @@
                 margin: 0
 
             .product-value
-                color: #505050 
+                color: var(--secondary-text-color)
                 font-family: Saira
                 font-size: 17px
                 font-style: italic
@@ -99,7 +99,7 @@
                 margin: 0
         
             .product-final-value
-                color: #101010
+                color: var(--primary-text-color)
                 font-family: Roboto
                 font-size: 24px
                 font-style: normal
@@ -108,10 +108,11 @@
 
     .divisor
         margin-left: 8%
-        border: 1px stroke #E4E4E4
+        color: var(--primary-text-color)
         width: 90%
 
 @media screen
     @media (max-width: 768px)
         .title
             margin: 0 !important
+            font-size: 30px !important
